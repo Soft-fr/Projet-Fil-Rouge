@@ -1,0 +1,131 @@
+.hero-contact {
+    min-height: 90vh;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3em;
+    padding: 5em 2em;
+}
+
+.hero-contact-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hero-contact-text h2 {
+    color: #ce4760;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.hero-contact-text h3 {
+    color: #ce4760;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.hero-contact-text p {
+    color: #ce4760;
+    font-size: 1.2em;
+    text-align: justify;
+    max-width: 80%;
+}
+
+.hero-contact-form {
+    max-width: 100%;
+}
+
+.hero-contact-form {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-contact-form {
+    width: 100%;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-contact-form input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ce4760;
+    font-size: 24px;
+    padding: 0.4em;
+    width: 100%;
+    color: #ce4760;
+    margin-bottom: 0.4em;
+}
+
+.row {
+    display: flex;
+    margin: 2em 0 !important;
+}
+
+.hero-contact-form textarea#message {
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ce4760;
+    font-size: 24px;
+    padding: 0.4em;
+    color: #ce4760;
+}
+
+.submit {   
+    width: 100%;
+    justify-content: space-around;
+}
+
+.submit a {
+    text-decoration: none;
+    color: #ce4760;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.send-icon {
+    font-size: 45px;
+    color: #ce4760;
+}
+
+@media  screen and (min-width: 950px) {
+    .hero-contact {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0em 2em;
+    }
+    .hero-contact-text {
+        align-items: flex-start;
+    }
+    .hero-contact-text h2 {
+        font-size: 3.5em;
+        text-align: left;
+    }
+    
+    .hero-contact-text h3 {
+        font-size: 2em;
+        text-align: left;
+    }
+    
+    .hero-contact-text p {
+        font-size: 1.6em;
+        max-width: 100%;
+    }
+}

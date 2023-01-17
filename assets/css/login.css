@@ -1,0 +1,123 @@
+.hero-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.hero-login-box {
+    position: relative;
+    width: 400px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .form {
+    position: relative;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background: #ce4760;
+    color: #fff;
+    font-size: 1.75em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.content .form h2 {
+    font-size: 2em;
+    color: #ce4760;
+    margin-bottom: 20px;
+}
+
+.content .form .form-input {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content .form .form-input input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0 10px 25px;
+    font-size: 1.25em;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 3px solid #ce4760;
+    outline: none;
+    color: #ce4760;
+}
+
+.content .form .form-input i {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    font-size: 1.25em;
+    color: #ce4760;
+}
+
+.content .form .form-input span {
+    position: absolute;
+    left: 0;
+    padding: 10px 0 10px 25px;
+    font-size: 1.25em;
+    pointer-events: none;
+    color: #ce4760;
+    transition: 0.5s;
+}
+
+.content .form .form-input input:focus ~ span,
+.content .form .form-input input:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 0.9em;
+    background: #ce4760;
+    color: #fff;
+    padding: 2px 4px;
+}
+
+.content .form .links {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .form .links a {
+    color: #ce4760;
+}
+
+.content .form .form-input input[type="submit"] {
+    background: #ce4760;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.content .form .form-input input[type="submit"]:hover {
+    background: #333;
+}
+
+
+
