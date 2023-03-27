@@ -34,16 +34,64 @@
     text-align: center;
     font-size: 1.2em;
     line-height: 1.5em;
-}
+}   
 
 .hero-banner-right a {
-    background: #ce4760;
-    border-radius: 10px;
-    padding: 15px;
-    color: #f6d0b1;
-    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
     font-size: 1.5em;
+    color: #ce4760;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 5px 0;
+    border-radius: 10px;
+    text-align: center;
     margin-top: 2em;
+  }
+  
+  .hero-banner-right a::before,
+  .hero-banner-right a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .hero-banner-right a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .hero-banner-right a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  .hero-banner-right a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  .hero-banner-right a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .hero-banner-right a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .hero-banner-right a:hover span {
+    transform: translate3d(-200%, 0, 0);
 }
 
 @media screen and (min-width: 755px) {
@@ -60,7 +108,7 @@
 
 @media screen and (min-width: 955px){
     .hero-banner {
-        margin-top: 4em;
+        margin-top: 6em;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -69,6 +117,7 @@
     }
     .hero-banner-right {
         max-width: 50%;
+        margin-top: 4em;
     }
 
     .hero-banner-left h2 {
@@ -90,6 +139,18 @@
     } 
     .hero-banner-left h2 {
         font-size: 3.2em;
+    }
+    .hero-banner {
+        margin-top: 6em;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .hero-banner-left {
+        max-width: 50%;
+    }
+    .hero-banner-right {
+        max-width: 50%;
+        margin-top: 7em;
     }
 }
 

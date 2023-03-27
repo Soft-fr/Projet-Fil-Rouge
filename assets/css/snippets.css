@@ -61,7 +61,7 @@
     border-radius: 8px;
     transform: skewX(15deg);
     transition: 0.5s;
-    background: linear-gradient(315deg, #0a0905, #ff0058);
+    background: linear-gradient(315deg, #0a0905, #ce4760);
 
 }
 
@@ -72,7 +72,7 @@
     left: 50px;
     width: 50%;
     height: 100%;
-    background: linear-gradient(315deg, #0a0905, #ff0058);
+    background: linear-gradient(315deg, #0a0905, #ce4760);
     border-radius: 8px;
     transform: skewX(15deg);
     transition: 0.5s;
@@ -83,7 +83,7 @@
 
 .card-container:nth-child(odd)::before,
 .card-container:nth-child(odd)::after {
-    background: linear-gradient(315deg, #4e46be, #0a0905);
+    background: linear-gradient(315deg, #54b3d6, #0a0905);
 }
 
 .card-container:hover::before,

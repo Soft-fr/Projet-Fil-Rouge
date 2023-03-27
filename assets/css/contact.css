@@ -94,15 +94,58 @@
 
 .submit a {
     text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
     color: #ce4760;
-    font-size: 40px;
     font-weight: 600;
-    text-transform: uppercase;
-}
-
-.send-icon {
-    font-size: 45px;
+    font-size: 40px;
     color: #ce4760;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 5px 0;
+  }
+  
+  .submit a::before,
+  .submit a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .submit a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .submit a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  .submit a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  .submit a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .submit a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .submit a:hover span {
+    transform: translate3d(-200%, 0, 0);
 }
 
 @media  screen and (min-width: 950px) {

@@ -108,16 +108,56 @@
     color: #ce4760;
 }
 
+.content .form .links a {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #ce4760 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .content .form .links a:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .content .form .links a:hover {
+   background-position: 0;
+  }
+  
+  .content .form .links a:hover::before{
+    width: 100%;
+  }
+
 .content .form .form-input input[type="submit"] {
     background: #ce4760;
     color: #fff;
     cursor: pointer;
     padding: 10px;
+    transition: all .6s;
 }
 
 .content .form .form-input input[type="submit"]:hover {
-    background: #333;
+    background: #54b3d6;
+    transition: all .6s;
 }
+
 
 
 
